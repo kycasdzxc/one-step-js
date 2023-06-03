@@ -1,41 +1,67 @@
 <!DOCTYPE html>
 <html>
-  <head>
+
+<head>
     <title>newtab</title>
     <meta charset="UTF-8" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@300;400&display=swap" rel="stylesheet" />
     <link rel="stylesheet" href="./css/main.css" />
-  </head>
-  <body>
+</head>
+
+<body>
     <div class="main-container">
-      <div class="main-wrapper">
-        <div class="today-info">
-          <div class="date" id="date">
-            <!-- 날짜&요일 -->
-          </div>
-          <div class="time" id="time">
-            <!-- 현재 시간 -->
-          </div>
+        <div class="main-wrapper">
+            <div class="today-info">
+                <div class="date" id="date">
+                    <!-- 날짜&요일 -->
+                </div>
+                <div class="time" id="time">
+                    <!-- 현재 시간 -->
+                </div>
+            </div>
+            <div class="search">
+                <input id="search-input" placeholder="검색어를 입력하세요" autocomplete="off" />
+            </div>
         </div>
-        <div class="search">
-          <input
-            id="search-input"
-            placeholder="검색어를 입력하세요"
-            autocomplete="off"
-          />
+        <div class="quote" id="quote">
+            <!-- 명언 -->
         </div>
-      </div>
-      <div class="quote" id="quote">
-        <!-- 명언 -->
-      </div>
+    </div>
+    <div class="bookmark-open" id="bookmark-open">
+        <div id="bookmark-open-btn">북마크 닫기</div>
+    </div>
+    <div class="bookmark-close" id="bookmark-close">
+        <div id="bookmark-close-btn">북마크 열기</div>
+    </div>
+    <div class="bookmark-bar" id="bookmark-bar">
+        <!-- 북마크 바 -->
+        <div class="bookmark-item-add-btn">
+            + 북마크 추가
+        </div>
+        <div class="bookmark-item-input-form" id="bookmark-item-input-form">
+            <div class="bookmark-input">
+                <div class="new-bookmark-name">
+                    <div class="label">이름</div>
+                    <input id="new-bookmark-name-input" />
+                </div>
+                <div class="new-bookmark-url">
+                    <div class="label">주소</div>
+                    <input id="new-bookmark-url-input" />
+                </div>
+            </div>
+            <div class="bookmark-item-input-btn">
+                <div class="cancel-btn" id="cancel-btn">취소</div>
+                <div class="add-btn" id="add-btn">추가</div>
+            </div>
+        </div>
     </div>
     <script src="./js/clock.js"></script>
     <script src="./js/search.js"></script>
     <script src="./js/quote.js"></script>
-  </body>
+    <script src="./js/bookmark-toggle.js"></script>
+    <script src="./js/bookmark.js"></script>
+</body>
+
 </html>

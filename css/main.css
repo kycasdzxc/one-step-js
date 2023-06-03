@@ -1,71 +1,108 @@
 :root {
-  --xlarge: 170px;
-  --large: 28px;
-  --medium: 18px;
-  --small: 16px;
-  --xsmall: 14px;
+    --xlarge: 170px;
+    --large: 28px;
+    --medium: 18px;
+    --small: 16px;
+    --xsmall: 14px;
 }
 
 body {
-  margin: 0 auto;
-  width: 100%;
-  font-family: "Noto Sans KR", sans-serif;
+    margin: 0 auto;
+    width: 100%;
+    font-family: "Noto Sans KR", sans-serif;
 }
 
 .main-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    position: relative;
 }
 
 .main-container .main-wrapper {
-  text-align: center;
+    text-align: center;
+    position: fixed;
 }
 
 /* 디지털시계 css */
 .main-wrapper .date {
-  font-size: var(--large);
-  font-weight: 400;
+    font-size: var(--large);
+    font-weight: 400;
 }
 
 .main-wrapper .time {
-  font-size: var(--xlarge);
-  font-weight: 400;
-  margin-top: -35px;
+    font-size: var(--xlarge);
+    font-weight: 400;
+    margin-top: -35px;
 }
 
 /* 검색바 css */
 .main-wrapper .search {
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 }
 
 .search #search-input {
-  width: 600px;
-  background-color: rgba(0, 0, 0, 0.5);
-  color: white;
-  font-size: var(--medium);
-  padding: 15px 0px;
-  border-radius: 30px;
-  border: 0px;
-  text-align: center;
-  margin-top: -10px;
+    width: 600px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    font-size: var(--medium);
+    padding: 15px 0px;
+    border-radius: 30px;
+    border: 0px;
+    text-align: center;
+    margin-top: -10px;
 }
 
 .search #search-input::placeholder {
-  color: rgb(169, 169, 169);
-  font-size: var(--medium);
+    color: rgb(169, 169, 169);
+    font-size: var(--medium);
 }
 
 /* 명언 css */
 .quote {
-  font-size: var(--small);
-  position: fixed;
-  bottom: 0;
-  max-width: 800px;
-  padding: 0 10px;
-  margin-bottom: 20px;
-  font-weight: 300;
-  text-align: center;
+    font-size: var(--small);
+    position: fixed;
+    bottom: 0;
+    max-width: 800px;
+    padding: 0 10px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    text-align: center;
+}
+
+/* 북마크 바 css */
+.bookmark-open,
+.bookmark-close {
+    width: 240px;
+    padding: 15px 30px;
+    font-size: var(--xsmall);
+    height: 20px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    justify-content: flex-end;
+    color: white;
+}
+
+.bookmark-open {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.bookmark-open div,
+.bookmark-close div {
+    cursor: pointer;
+}
+
+.bookmark-bar {
+    width: 240px;
+    background-color: rgba(0, 0, 0, 0.5);
+    position: absolute;
+    top: 50px;
+    right: 0px;
+    min-height: calc(100vh - 70px);
+    padding: 10px 30px;
+    color: white;
 }
