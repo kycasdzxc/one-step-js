@@ -4,6 +4,7 @@
     --medium: 18px;
     --small: 16px;
     --xsmall: 14px;
+    --xxsmall: 10px;
 }
 
 body {
@@ -105,4 +106,101 @@ body {
     min-height: calc(100vh - 70px);
     padding: 10px 30px;
     color: white;
+}
+
+/* 북마크 추가 버튼 css */
+.bookmark-item-add-btn {
+    padding: 10px;
+    font-size: var(--small);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: rgba(241, 241, 241, 0.2) 0.5px solid;
+    margin-bottom: 35px;
+    margin-top: 10px;
+}
+
+.bookmark-item-add-btn:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 북마크 추가 폼 css */
+.bookmark-item-input-form {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: rgba(241, 241, 241, 0.2) 0.5px solid;
+    font-size: var(--small);
+    padding: 12px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.bookmark-item-input-form .bookmark-input {
+    margin-bottom: 12px;
+}
+
+.bookmark-item-input-form .bookmark-input .label {
+    margin-bottom: 3px;
+    font-size: var(--xsmall);
+}
+
+.bookmark-item-input-form .bookmark-input input {
+    width: 200px;
+    height: 20px;
+    border-radius: 5px;
+    margin: 5px;
+}
+
+.bookmark-item-input-btn {
+    display: flex;
+    justify-content: space-between;
+    font-size: var(--xsmall);
+    margin-top: 5px;
+}
+
+.bookmark-item-input-btn div {
+    padding: 5px 35px;
+    border-radius: 5px;
+    border: rgba(241, 241, 241, 0.2) 0.5px solid;
+    cursor: pointer;
+}
+
+.bookmark-item-input-btn div:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+/* 북마크 리스트 css */
+.bookmark-list a {
+    color: white;
+    display: flex;
+    text-decoration: none;
+}
+
+.bookmark-list .url-icon {
+    margin-right: 8px;
+}
+
+.url-icon img {
+    vertical-align: middle;
+}
+
+.bookmark-list .bookmark-item {
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: rgba(241, 241, 241, 0.2) 0.5px solid;
+    font-size: var(--small);
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.bookmark-item .del-btn {
+    color: lightgray;
+    vertical-align: center;
+    font-size: var(--xxsmall);
+    cursor: pointer;
 }
